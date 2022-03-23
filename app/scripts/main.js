@@ -240,11 +240,6 @@ var find = (function() {
 			if (!f.stats.elm)
 				return false;
 			var html = '';
-			html += '<div class="feedback"><a href="https://twitter.com/intent/tweet?text=www.FindTheInvisibleCow.com%20by%20@scriptist" target="_blank">Send feedback with twitter</a></div>';
-			if (f.stats.total)
-				html += '<div class="total">' + f.numberFormat(f.stats.total) + '</div>';
-			else
-				html += '<div class="total">' + '9,100,000+' + '</div>';
 			html += '<div class="points">' + f.numberFormat(f.stats.points) + '</div>';
 			if (f.settings.stats) {
 				html += '<div class="more">';
@@ -262,7 +257,7 @@ var find = (function() {
 		},
 		updateTotal: function() {
 			// f.getScript('/api/getFound?callback=find.setTotal');
-			f.makeTotalRequest();
+			// f.makeTotalRequest();
 		},
 		makeTotalRequest: function(increment) {
 			var type = 'GET',
