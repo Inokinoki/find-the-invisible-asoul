@@ -23,9 +23,9 @@ var find = (function() {
 		},
 		animals: {
 			cow: {
-				duration: 0.3,
+				duration: 0.5,
 				levels: 11,
-				mooDelay: 1200
+				mooDelay: 1500
 			},
 			goat: {
 				duration: 0.35,
@@ -300,7 +300,6 @@ var find = (function() {
 			return f.track2(category, action, label, value);
 		},
 		track2: function(category, action, label, value) {
-			ga('send', 'event', category, action, label, value);
 		},
 		getScript: function(url) {
 			return false;
