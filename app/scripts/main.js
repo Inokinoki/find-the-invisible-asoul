@@ -28,7 +28,7 @@ var find = (function() {
 				mooDelay: 1500
 			},
 			goat: {
-				duration: 0.35,
+				duration: 1,
 				levels: 10,
 				mooDelay: 1000
 			},
