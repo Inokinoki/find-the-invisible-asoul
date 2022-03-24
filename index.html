@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+
+<!-- Hi, I'm a web developer. Contact me at michael@scripti.st. -->
+
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+
+  <!-- Meta -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="Because it ain't gonna find itself.">
+
+  <title>勇敢牛牛不见了，找到它</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/main.css">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="勇敢牛牛不见了，找到它"/>
+
+</head>
+<body>
+  <div id="animal"></div>
+
+  <div id="stats"></div>
+
+  <div id="modal-welcome">
+    <h1>勇敢牛牛不见了，找到它！</h1>
+    <p id="quote"></p>
+    <p>移动你的鼠标来找到<del>贝拉</del>勇敢牛牛，她躲在叫声后边。</p>
+    <p class="important">请在找<del>贝拉</del>勇敢牛牛之前确认你能够播放声音。</p>
+
+    <div id="loader" class="loading"></div>
+
+    <p class="note">如果你什么都听不到，有可能你的浏览器不支持 Web Audio。目前支持的浏览器有 <a href="http://google.com/chrome" target="_blank">Chrome 10+</a>, <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox 25+</a>, <a href="http://www.opera.com/" target="_blank">Opera 15+</a> 和 <a href="http://www.apple.com/au/safari/" target="_blank">Safari 6+</a>.</p>
+  </div>
+
+  <div id="modal-no-audio">
+    <h1>This is a web experiment</h1>
+    <p>Sorry, your browser does not support the Web Audio API, which is an integral part of this experiment.</p>
+    <p>Currently supported browsers are <a href="http://google.com/chrome" target="_blank">Chrome 10+</a>, <a href="http://www.mozilla.org/en-US/firefox/new/" target="_blank">Firefox 25+</a>, <a href="http://www.opera.com/" target="_blank">Opera 15+</a>, and <a href="http://www.apple.com/au/safari/" target="_blank">Safari 6+</a>.</p>
+  </div>
+
+  <div id="modal-congratulations">
+    <h1>恭喜！</h1>
+    <p>你找到了一位 A-SOUL 成员</p>
+    <p>&nbsp;</p>
+    <p><label><input type="checkbox" data-expertMode>专家模式 <span class="grey">(你的鼠标不会变化)</span></label></p>
+    <div data-donated="0">
+      <div data-points-max="4">
+        <p><label>
+          找一个
+          <select data-animal>
+            <option value="cow" selected><del>贝拉</del>勇敢牛牛</option>
+          </select>
+          <small>找到 <strong>五次</strong> <del>贝拉</del>勇敢牛牛来解锁其他 A-SOUL 成员！</small>
+        </label></p>
+      </div>
+      <div data-points-min="5">
+        <p><label>
+          找到了一个
+          <select data-animal>
+            <option value="cow" selected><del>贝拉</del>勇敢牛牛</option>
+            <option value="goat"><del>向晚</del>懒羊羊</option>
+          </select>
+          <small><strong>恭喜！你解锁了<del>向晚</del>懒羊羊</strong></small>
+        </label></p>
+      </div>
+    </div>
+    <div data-donated="1">
+      <p><label>
+	  找到了一个
+	  <select data-animal>
+	    <option value="cow" selected><del>贝拉</del>勇敢牛牛</option>
+	    <option value="goat"><del>向晚</del>懒羊羊</option>
+            <option value="fox"><del>乃琳</del>白狐狸</option>
+        </select>
+      </label></p>
+    </div>
+    <button onclick="find.gameStart();">再找一个</button>
+  </div>
+
+  <div id="modal-beer">
+  </div>
+
+  <noscript>
+    <div class="noscript">
+      看起来你禁用了 JavaScript.<br /><br />没有 A-SOUL 成员能给你 :(
+    </div>
+  </noscript>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
