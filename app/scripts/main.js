@@ -166,7 +166,7 @@ var find = (function() {
 			f.stats.points++;
 			if (win) {
 				// f.getScript('/api/foundOne?callback=find.setTotal');
-				f.makeTotalRequest(true);
+				// f.makeTotalRequest(true);
 				f.stats.wins++;
 			}
 			f.updateStats();
@@ -258,37 +258,6 @@ var find = (function() {
 		updateTotal: function() {
 			// f.getScript('/api/getFound?callback=find.setTotal');
 			// f.makeTotalRequest();
-		},
-		makeTotalRequest: function(increment) {
-			var type = 'GET',
-				data;
-
-			if (increment) {
-				type = 'PUT';
-			}
-
-
-			var xhr = createCORSRequest(type, 'https://api.mongolab.com/api/1/databases/ftic/collections/count/52fea714e4b056266d60bd3a?apiKey=zq2DUayEFGTLl08aGo8tICf8Ywy6K_Y_');
-			if (!xhr){
-				return console.error('CORS not supported');
-			}
-
-			if (increment) {
-				xhr.setRequestHeader('Content-Type', 'application/json');
-				data = JSON.stringify( { "$inc" : { "count" : 1 } } );
-			}
-
-			xhr.send(data);
-
-			/*SUCCESS -- do somenthing with data*/
-			xhr.onload = function(){
-				// process the response.
-				f.setTotal(JSON.parse(xhr.responseText));
-			};
-
-			xhr.onerror = function(e){
-				console.error(e);
-			};
 		},
 		setTotal: function(data) {
 			var i = parseInt(data.count);
