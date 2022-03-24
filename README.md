@@ -1,8 +1,7 @@
 # Find the invisible brave cow
 
-Modified version, currently work with Beeeeeeeeella~ Missing:
+Modified version, currently work with Beeeeeeeeella and AvavaAva~ Missing:
 
-- Pope Wan (AvA)
 - Fox Eileen
 - Cat Diana
 - Wolf Carol
