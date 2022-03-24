@@ -137,7 +137,7 @@ $padding: 1em;
   display: none;
   position: absolute;
 
-  background: url(./images/cow-sprite.png);
+  background: url(../images/cow-sprite.png);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
@@ -161,11 +161,11 @@ $padding: 1em;
   }
 
   &[data-animal="goat"] {
-    background-image: url(./images/goat-sprite.png);
+    background-image: url(../images/goat-sprite.png);
   }
 
   &[data-animal="fox"], &.moo[data-animal="fox"] {
-    background-image: url(./images/fox-sprite.png);
+    background-image: url(../images/fox-sprite.png);
   }
 }
 
